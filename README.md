@@ -105,7 +105,8 @@ Install the browser extra and Chromium once. With uv (reinstalls the tool with t
 
 ```bash
 uv tool install --force "moodle-student-mcp[browser] @ git+https://github.com/Ilya-Grigoryev/moodle-student-mcp"
-"$(uv tool dir)/moodle-student-mcp/bin/python" -m playwright install chromium
+uv tool install playwright
+uv tool run playwright install chromium
 moodle-mcp setup --browser --url https://moodle.univie.ac.at
 ```
 
